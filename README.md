@@ -4,13 +4,13 @@ Bash helpers to go from **zero** to the **DSM Web Assistant** (`:5000`) on Proxm
 
 Validated on Arc **3.1.0**, DSM **7.2.2-72806**, DS923+ / r1000. A 2-core, 4 GB RAM VM on a Ryzen 5600G-class host reaches `:5000` in about **2 minutes** from first loader boot when PAT download is online.
 
-Upstream Arc changes that would simplify these scripts are [pending review](https://github.com/AuxXxilium/arc/pulls?q=is%3Apr+author%3Aaioue); this repo includes workarounds until those merge.
+This repo is the maintained path for headless installs. It includes workarounds (p1 `/automated`, `arc.offline`, and similar) discovered while automating Arc on Proxmox. I opened upstream PRs first ([#9536](https://github.com/AuxXxilium/arc/pull/9536) and others); they were closed without merge — see [Upstream](#upstream) below.
 
 ## Links
 
 - **Blog post:** [Zero to Synology DSM on Proxmox: headless Arc install in about 2 minutes](https://aioue.github.io/2026/07/31/proxmox-headless-arc-zero-to-dsm.html)
 - **Arc Loader upstream:** [AuxXxilium/arc](https://github.com/AuxXxilium/arc)
-- **Headless install docs (upstream PR):** [AuxXxilium/arc#9537](https://github.com/AuxXxilium/arc/pull/9537)
+- **Closed upstream PRs (reference):** [aioue PRs on AuxXxilium/arc](https://github.com/AuxXxilium/arc/pulls?q=is%3Apr+author%3Aaioue)
 
 ## Prerequisites
 
@@ -104,6 +104,10 @@ PAT URL and hash must match your model/build. Find them in Arc Config Mode or Ar
 2. Write **both** `/mnt/p1/automated` and `/mnt/p3/automated`, set `grub-editenv next_entry=automated`, reboot.
 3. Loader boots **`automated_arc`**; `arc.sh` runs on the serial console (dialog works).
 4. PAT downloads, loader builds, DSM boots. Success when `arc.builddone=true` or loader SSH closes and `:5000` responds.
+
+## Upstream
+
+Small PRs to [AuxXxilium/arc](https://github.com/AuxXxilium/arc) ([#9536](https://github.com/AuxXxilium/arc/pull/9536) and others) were submitted with repro steps before this repo was published. They were closed without merge. Workarounds stay here so headless installs work on stock Arc 3.1.0 without waiting on upstream.
 
 ## License
 
