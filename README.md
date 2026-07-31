@@ -8,7 +8,7 @@ This repo is the maintained path for headless installs. It includes workarounds 
 
 ## Links
 
-- **Blog post:** [Zero to Synology DSM on Proxmox: headless Arc install in about 2 minutes](https://aioue.github.io/2026/07/31/proxmox-headless-arc-zero-to-dsm.html)
+- **Blog post:** [Zero to Synology DSM on Proxmox: headless Arc install in about 2 minutes](https://aioue.net/2026/07/31/proxmox-headless-arc-zero-to-dsm/)
 - **Arc Loader upstream:** [AuxXxilium/arc](https://github.com/AuxXxilium/arc)
 - **Closed upstream PRs (reference):** [aioue PRs on AuxXxilium/arc](https://github.com/AuxXxilium/arc/pulls?q=is%3Apr+author%3Aaioue)
 
